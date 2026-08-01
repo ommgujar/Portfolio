@@ -16,23 +16,14 @@ CSS3 — custom properties (CSS variables), Grid & Flexbox, no framework
 Vanilla JavaScript — no build tools or dependencies
 Font Awesome — icons
 Google Fonts — Outfit, Plus Jakarta Sans, Fira Code
+
 📁 Project Structure
 mern-portfolio/
 ├── index.html      # Page markup and content
 ├── styles.css       # All styling, theming, and responsive rules
 ├── script.js         # Theme toggle, modals, form, and interactivity
 └── profile.jpg       # Your profile photo (optional — falls back to an avatar icon)
-🚀 Getting Started
-Clone the repository
-bash
-   git clone https://github.com/omgujar/mern-portfolio.git
-   cd mern-portfolio
-Add your photo (optional) Place a photo named profile.jpg in the project root. If it's missing, a default avatar icon is shown automatically.
-Open the site Simply open index.html in your browser, or serve it locally with any static server, e.g.:
-bash
-   npx live-server
 
-No build step, no dependencies to install — it just runs.
 
 🎨 Customization
 Colors & theme tokens — edit the CSS variables at the top of styles.css (:root and [data-theme="light"])
