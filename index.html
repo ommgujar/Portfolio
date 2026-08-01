@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Gujar | Full Stack MERN Developer</title>
+  <meta name="description" content="Portfolio of Om Gujar - Full Stack MERN Web Developer and Data Structures & Algorithms Specialist with 150+ LeetCode problems solved.">
+  <meta name="keywords" content="Om Gujar, MERN Developer, React, Node.js, Express, MongoDB, LeetCode, DSA, Full Stack Engineer, Student Portfolio">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-accent">//</span> <span class="logo-text">Om Gujar</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#leetcode" class="nav-item">DSA & LeetCode</a>
+        <a href="#skills" class="nav-item">Tech Stack</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="icon-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Navigation">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-text-col">
+          <div class="availability-pill">
+            <span class="pulse-indicator"></span>
+            <span>Open for Software Engineer Roles & Internships</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Hi, I'm <span class="highlight-gradient">Om Gujar</span> 👋
+            <br>
+            Full-Stack MERN Engineer
+          </h1>
+
+          <p class="hero-lead">
+            Passionate Computer Science student specializing in building scalable web applications with Node.js, Express, React, and MongoDB. .
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-md">
+              View Featured Work <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-md">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-md">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-box">
+              <span class="stat-number">150+</span>
+              <span class="stat-label">LeetCode Solved</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Full Stack MERN Apps</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Clean Code & Complexity Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Profile Photo Frame Column -->
+        <div class="hero-visual-col">
+          <div class="profile-card-wrapper">
+
+            <!-- Glowing Ambient Ring Border -->
+            <div class="profile-glow-ring"></div>
+
+            <!-- Profile Image Box -->
+            <div class="profile-image-container" id="profileImgContainer" title="Om Gujar">
+
+              <!-- Image Display Tag -->
+              <!-- Replace "profile.jpg" below with the filename of your own photo,
+                   placed in the same folder as index.html. If the file is missing,
+                   the default avatar icon will show automatically instead. -->
+              <img id="userPhotoImg" class="user-photo-img" src="profile.jpg" alt="Om Gujar Photo" style="display: none;">
+
+              <!-- Fallback Default SVG Avatar -->
+              <svg id="defaultAvatarSvg" class="profile-avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#06b6d4"/>
+                  </linearGradient>
+                  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e293b"/>
+                    <stop offset="100%" stop-color="#0f172a"/>
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="200" rx="30" fill="url(#bgGrad)" />
+                <circle cx="100" cy="75" r="38" fill="url(#avatarGrad)" />
+                <path d="M 40,165 C 40,125 70,115 100,115 C 130,115 160,125 160,165 Z" fill="url(#avatarGrad)" opacity="0.9" />
+                <circle cx="85" cy="72" r="10" stroke="#ffffff" stroke-width="3" fill="none" />
+                <circle cx="115" cy="72" r="10" stroke="#ffffff" stroke-width="3" fill="none" />
+                <line x1="95" y1="72" x2="105" y2="72" stroke="#ffffff" stroke-width="3" />
+                <path d="M 90,92 Q 100,100 110,92" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <!-- Floating Stat Badges around Photo (No overlap) -->
+            <div class="floating-chip chip-top-right">
+              <i class="fa-solid fa-code text-cyan"></i>
+              <div>
+                <strong>150+</strong>
+                <span>LeetCode Solved</span>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-bottom-left">
+              <i class="fa-solid fa-layer-group text-emerald"></i>
+              <div>
+                <strong>MERN Stack</strong>
+                <span>Full Stack Developer</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT / PHILOSOPHY SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Engineering Approach</span>
+          <h2 class="section-heading">How I Build & <span class="highlight-gradient">Solve Problems</span></h2>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <h3>Algorithmic Thinking First</h3>
+            <p>
+              I don't just write code that works; I write code that scales. With <strong>150+ solved LeetCode problems</strong>, I analyze dynamic programming patterns, graph traversals, and data structures to ensure low latency and optimized execution.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <h3>End-to-End MERN Architecture</h3>
+            <p>
+              From designing NoSQL MongoDB document schemas to structuring Express RESTful APIs, JWT authentication, and responsive React UIs, I craft seamless full-stack applications.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <h3>Clean Code & Best Practices</h3>
+            <p>
+              I prioritize modular code structure, proper state management with Redux/Context API, asynchronous error handling, semantic HTML, and accessibility standards across all devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL LEETCODE & DSA SHOWCASE SECTION -->
+    <section class="section leetcode-section" id="leetcode">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Problem Solving Track Record</span>
+          <h2 class="section-heading">150+ <span class="highlight-gradient">LeetCode DSA</span> Showcase</h2>
+          <p class="section-lead">
+            Here are actual algorithms and patterns I've mastered on LeetCode. Click any problem to view my optimized solution and complexity analysis.
+          </p>
+        </div>
+
+        <!-- LeetCode Stats Summary Bar -->
+        <div class="leetcode-stats-bar">
+          <div class="lc-stat-item">
+            <span class="lc-val text-emerald">55+</span>
+            <span class="lc-lbl">Easy Solved</span>
+          </div>
+          <div class="lc-stat-item">
+            <span class="lc-val text-amber">80+</span>
+            <span class="lc-lbl">Medium Solved</span>
+          </div>
+          <div class="lc-stat-item">
+            <span class="lc-val text-rose">15+</span>
+            <span class="lc-lbl">Hard Solved</span>
+          </div>
+          <div class="lc-stat-item action-item">
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit LeetCode Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Real LeetCode Problem Cards Grid -->
+        <!-- Add your own problem cards here. Example structure for one card:
+        <div class="leetcode-grid">
+          <div class="lc-card">
+            <div class="lc-card-header">
+              <span class="lc-badge medium-badge">MEDIUM</span>
+              <span class="lc-id">#PROBLEM_NUMBER</span>
+            </div>
+            <h3 class="lc-problem-title">Problem Title</h3>
+            <div class="lc-meta">
+              <span>Pattern: e.g. Sliding Window</span>
+              <span class="complexity">O(n) time · O(1) space</span>
+            </div>
+            <p class="lc-problem-desc">Short description of the problem.</p>
+            <button class="toggle-code-btn" data-target="code-unique-id">
+              <span>View Solution</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="code-collapse" id="code-unique-id">
+              <pre><code>// your solution code here</code></pre>
+            </div>
+          </div>
+        </div>
+        -->
+        <div class="leetcode-grid">
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Tech Stack & Competencies</span>
+          <h2 class="section-heading">MERN & <span class="highlight-gradient">Development Toolkit</span></h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-brands fa-react text-cyan"></i>
+              <h3>Frontend Development</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>React.js (Hooks, Context API)</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Redux Toolkit (State Management)</span> <span class="level-tag">Proficient</span></li>
+              <li><span>JavaScript (ES6+, Async/Await)</span> <span class="level-tag">Advanced</span></li>
+              <li><span>HTML5, CSS3, Modern Flex/Grid</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Responsive Web Design</span> <span class="level-tag">Advanced</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-brands fa-node-js text-emerald"></i>
+              <h3>Backend Engineering</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>Node.js & Event Loop Architecture</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Express.js (RESTful APIs, Middleware)</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Authentication (JWT, bcrypt)</span> <span class="level-tag">Proficient</span></li>
+              <li><span>WebSockets & Real-Time Sync (Socket.io)</span> <span class="level-tag">Proficient</span></li>
+              <li><span>API Routing & Error Handling</span> <span class="level-tag">Advanced</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fa-solid fa-database text-purple"></i>
+              <h3>Databases & Core CS</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>MongoDB & Mongoose ODM</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Data Structures & Algorithms (150+)</span> <span class="level-tag">Advanced</span></li>
+              <li><span>Git, GitHub & Version Control</span> <span class="level-tag">Proficient</span></li>
+              <li><span>Postman API Testing</span> <span class="level-tag">Proficient</span></li>
+              <li><span>Operating Systems & DBMS Concepts</span> <span class="level-tag">Proficient</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tag">Case Studies</span>
+          <h2 class="section-heading">Featured <span class="highlight-gradient">MERN Projects</span></h2>
+          <p class="section-lead">Full-stack web applications built with scalable backend APIs, responsive UIs, and real-world database design.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: CampusKart -->
+          <div class="project-card">
+            <div class="project-header-bar p1-bg">
+              <span class="proj-badge">MERN + Socket.io</span>
+              <div class="proj-icon"><i class="fa-solid fa-store"></i></div>
+            </div>
+            <div class="project-content">
+              <h3 class="proj-title">CampusKart - Peer Marketplace & Real-Time Chat</h3>
+              <p class="proj-desc">
+                A full-stack campus marketplace where students buy, sell, and trade textbooks and electronics. Features real-time buyer-seller messaging via WebSockets and JWT security.
+              </p>
+              <div class="proj-tags">
+                <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.io</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-secondary btn-sm open-modal-btn" data-project="campuskart">
+                  <i class="fa-solid fa-circle-info"></i> Architecture Case Study
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: AlgoTrack -->
+          <div class="project-card">
+            <div class="project-header-bar p2-bg">
+              <span class="proj-badge">MERN + Analytics</span>
+              <div class="proj-icon"><i class="fa-solid fa-chart-line"></i></div>
+            </div>
+            <div class="project-content">
+              <h3 class="proj-title">AlgoTrack - DSA Revision Analytics</h3>
+              <p class="proj-desc">
+                A personalized tracker for Data Structures & Algorithms problem solving. Uses spaced repetition algorithms to schedule question revisions based on difficulty and review history.
+              </p>
+              <div class="proj-tags">
+                <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Chart.js</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-secondary btn-sm open-modal-btn" data-project="algotrack">
+                  <i class="fa-solid fa-circle-info"></i> Architecture Case Study
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: DevFeed -->
+          <div class="project-card">
+            <div class="project-header-bar p3-bg">
+              <span class="proj-badge">Full Stack Web</span>
+              <div class="proj-icon"><i class="fa-solid fa-newspaper"></i></div>
+            </div>
+            <div class="project-content">
+              <h3 class="proj-title">DevFeed - Tech Blogging & Snippet Platform</h3>
+              <p class="proj-desc">
+                A blogging platform for developers to post markdown tutorials, save code snippets, and interact through comments and reactions.
+              </p>
+              <div class="proj-tags">
+                <span>React</span><span>Redux</span><span>Express</span><span>MongoDB</span><span>Markdown Parser</span>
+              </div>
+              <div class="proj-actions">
+                <button class="btn btn-secondary btn-sm open-modal-btn" data-project="devfeed">
+                  <i class="fa-solid fa-circle-info"></i> Architecture Case Study
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          <div class="contact-info-side">
+            <span class="section-tag">Let's Connect</span>
+            <h2>Open to Software Engineering Roles & Opportunities</h2>
+            <p>
+              I am actively seeking Full Stack Developer roles, MERN internships, or technical opportunities. Feel free to reach out directly!
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span class="label">Email Address</span>
+                  <span class="val" id="emailVal">om.gujar@example.com</span>
+                </div>
+                <button id="copyEmailBtn" class="copy-icon-btn" title="Copy Email"><i class="fa-regular fa-copy"></i></button>
+              </div>
+
+              <div class="contact-item">
+                <i class="fa-brands fa-linkedin text-linkedin"></i>
+                <div>
+                  <span class="label">LinkedIn</span>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="val link">linkedin.com/in/om-gujar</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fa-brands fa-github text-github"></i>
+                <div>
+                  <span class="label">GitHub</span>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="val link">github.com/omgujar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-side">
+            <h3>Send a Direct Message</h3>
+            <form id="humanContactForm">
+              <div class="form-field">
+                <label for="cName">Your Name</label>
+                <input type="text" id="cName" placeholder="Recruiter / Hiring Manager" required>
+              </div>
+              <div class="form-field">
+                <label for="cEmail">Your Email</label>
+                <input type="email" id="cEmail" placeholder="hiring@company.com" required>
+              </div>
+              <div class="form-field">
+                <label for="cMessage">Message</label>
+                <textarea id="cMessage" rows="4" placeholder="Hi Om, we reviewed your MERN projects and 150+ LeetCode DSA profile..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-md btn-full" id="sendFormBtn">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Om Gujar. Full-Stack MERN Developer & DSA Specialist.</p>
+      <a href="#hero" class="back-top-link"><i class="fa-solid fa-arrow-up"></i> Top</a>
+    </div>
+  </footer>
+
+  <!-- CASE STUDY MODAL -->
+  <div class="modal-overlay" id="caseStudyModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div id="modalContainer"></div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toastNotification" class="toast-box"></div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
