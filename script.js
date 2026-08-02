@@ -164,12 +164,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ---------- CONTACT FORM SUBMIT (demo only, no backend wired) ---------- */
+  /* ---------- CONTACT FORM SUBMIT (mailto — opens the visitor's email client) ---------- */
   const contactForm = document.getElementById('humanContactForm');
+  const DEST_EMAIL = 'omgujar105@gmail.com';
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    showToast('Message ready! Connect a backend or mailto link to send it.');
+
+    const nameField = document.getElementById('cName');
+    const emailField = document.getElementById('cEmail');
+    const messageField = document.getElementById('cMessage');
+
+    const name = nameField.value.trim();
+    const senderEmail = emailField.value.trim();
+    const message = messageField.value.trim();
+
+    if (!name || !senderEmail || !message) {
+      showToast('Please fill in all fields before sending.');
+      return;
+    }
+
+    const subject = `Portfolio Inquiry from ${name}`;
+    const body =
+      `Name: ${name}\n` +
+      `Email: ${senderEmail}\n\n` +
+      `${message}`;
+
+    const mailtoUrl =
+      `mailto:${DEST_EMAIL}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    // Opens the visitor's default email client (Gmail, Outlook, Mail app, etc.)
+    // with the message pre-filled and ready to send.
+    window.location.href = mailtoUrl;
+
+    showToast('Opening your email client to send the message...');
     contactForm.reset();
   });
 
