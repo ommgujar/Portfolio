@@ -100,28 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const caseStudies = {
     campuskart: {
-      title: 'CampusKart - Peer Marketplace & Real-Time Chat',
-      body: `
-        <p><strong>Overview:</strong> A full-stack marketplace built for students to buy, sell, and trade textbooks and electronics within their campus network.</p>
-        <p><strong>Architecture:</strong> React front end communicating with an Express REST API, MongoDB for listings and user data, and Socket.io for real-time buyer-seller chat. JWT-based authentication secures every route.</p>
-        <p><strong>Highlights:</strong> Optimized MongoDB indexes for fast search, debounced client-side filtering, and a WebSocket layer that keeps chat state in sync across sessions.</p>
-      `
+      
     },
     algotrack: {
-      title: 'AlgoTrack - DSA Revision Analytics',
-      body: `
-        <p><strong>Overview:</strong> A personal tracker for logging LeetCode-style problems and scheduling revisions using spaced repetition.</p>
-        <p><strong>Architecture:</strong> React dashboard with Chart.js visualizations, an Express API for CRUD operations, and MongoDB storing problem metadata, difficulty, and review history.</p>
-        <p><strong>Highlights:</strong> A spaced-repetition scheduler that reorders due problems automatically, and analytics views that break down solved problems by pattern and difficulty.</p>
-      `
+     
     },
     devfeed: {
-      title: 'DevFeed - Tech Blogging & Snippet Platform',
-      body: `
-        <p><strong>Overview:</strong> A blogging platform for developers to publish markdown tutorials, share reusable code snippets, and engage through comments and reactions.</p>
-        <p><strong>Architecture:</strong> React + Redux front end, Express backend, MongoDB for posts and comments, with a markdown parser rendering rich post content safely.</p>
-        <p><strong>Highlights:</strong> Syntax-highlighted code blocks, optimistic UI updates for comments/reactions, and role-based access for authors vs. readers.</p>
-      `
+     
     }
   };
 
